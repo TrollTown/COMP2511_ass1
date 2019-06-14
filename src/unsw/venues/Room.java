@@ -23,7 +23,7 @@ public class Room {
 	
 	public boolean checkAvailability(LocalDate startDate, LocalDate endDate) {
 		for (int i = 0; i < this.occupancy.size(); i++) {
-			if (compareDateRanges(startDate, endDate, this.occupancy.get(i))) {
+			if (checkDateRanges(startDate, endDate, this.occupancy.get(i)) == false) {
 				return false;
 			}
 		}
@@ -35,7 +35,7 @@ public class Room {
 		this.occupancy.add(period);
 	}
 	
-	private boolean compareDateRanges(LocalDate startDate, LocalDate endDate, TimePeriod period) {
+	private boolean checkDateRanges(LocalDate startDate, LocalDate endDate, TimePeriod period) {
 		if (startDate.compareTo(period.getEndDate()) > 0){
 			return true;
 		}
