@@ -1,10 +1,12 @@
 package unsw.venues;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Room {
 	private String name;
 	private String size;
+	private ArrayList<TimePeriod> occupancy;
 	
 	public Room (String name, String size) {
 		this.name = name;
@@ -20,10 +22,28 @@ public class Room {
 	}
 	
 	public boolean checkAvailability(LocalDate startDate, LocalDate endDate) {
-		return false;
+		for (int i = 0; i < this.occupancy.size(); i++) {
+			if (compareDateRanges(startDate, endDate, this.occupancy.get(i))) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public void addTimePeriod(String id, LocalDate startDate, LocalDate endDate) {
-		
+		TimePeriod period = new TimePeriod(id, startDate, endDate);
+		this.occupancy.add(period);
+	}
+	
+	private boolean compareDateRanges(LocalDate startDate, LocalDate endDate, TimePeriod period) {
+		if (startDate.compareTo(period.getEndDate()) > 0){
+			return true;
+		}
+		else if (endDate.compareTo(period.getStartDate()) < 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
