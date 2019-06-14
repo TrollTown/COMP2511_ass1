@@ -4,6 +4,7 @@
 package unsw.venues;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
  *
  */
 public class VenueHireSystem {
-
+	private ArrayList<Reservation> reservations;
     /**
      * Constructs a venue hire system. Initially, the system contains no venues,
      * rooms, or bookings.
@@ -52,10 +53,55 @@ public class VenueHireSystem {
             break;
 
         // TODO Implement other commands
+        case "change":
+        	String id1 = json.getString("id");
+        	LocalDate start1 = LocalDate.parse(json.getString("start"));
+        	LocalDate end1 = LocalDate.parse(json.getString("end"));
+        	int small1 = json.getInt("small");
+        	int medium1 = json.getInt("medium");
+        	int large1 = json.getInt("large");
+        	
+        	JSONObject changeOutput = change(id1, start1, end1, small1, medium1, large1);
+        	
+        	System.out.println(changeOutput.toString(2));
+        	break;
+        	
+        case "cancel":
+        	String id2 = json.getString("id");
+        	
+        	JSONObject cancelOutput = cancel(id2);
+        	
+        	System.out.println(cancelOutput.toString(2));
+        	break;
+        
+        case "list":
+        	String id3 = json.getString("id");
+        	
+        	JSONObject listOutput = list(id3);
+        	
+        	System.out.println(listOutput.toString(2));
+        	break;
         }
     }
 
-    private void addRoom(String venue, String room, String size) {
+   
+	
+
+	public JSONObject change(String id1, LocalDate start1, LocalDate end1, int small1, int medium1, int large1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public JSONObject cancel(String id2) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	
+	public JSONObject list(String id3) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	private void addRoom(String venue, String room, String size) {
         // TODO Process the room command
     }
 
@@ -91,5 +137,10 @@ public class VenueHireSystem {
         }
         sc.close();
     }
-
+    
+    public ArrayList<Reservation> getReservations(){
+    	return this.reservations;
+    }
+    
+    public makeRequest
 }
