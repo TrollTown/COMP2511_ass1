@@ -109,9 +109,7 @@ public class VenueHireSystem {
             int small, int medium, int large) {
         JSONObject result = new JSONObject();
 
-        // TODO Process the request commmand
-
-        // FIXME Shouldn't always produce the same answer
+        
         result.put("status", "success");
         result.put("venue", "Zoo");
 
@@ -141,6 +139,4 @@ public class VenueHireSystem {
     public ArrayList<Reservation> getReservations(){
     	return this.reservations;
     }
-    
-    public makeRequest
 }

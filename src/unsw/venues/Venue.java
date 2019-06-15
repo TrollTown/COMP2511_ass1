@@ -1,5 +1,6 @@
 package unsw.venues;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Venue {
@@ -19,4 +20,55 @@ public class Venue {
 		Room newRoom = new Room(name, size);
 		this.rooms.add(newRoom);
 	}
+	
+	
+	
+	public ArrayList<Room> requestRooms(String id, LocalDate startDate, LocalDate endDate, int small, int medium, int large){
+		ArrayList<Room> smallRooms = getRooms(startDate, endDate, "small");
+		ArrayList<Room> mediumRooms = getRooms(startDate, endDate, "medium");
+		ArrayList<Room> largeRooms = getRooms(startDate, endDate, "large");
+		
+		if (smallRooms.size() < small || mediumRooms.size() < medium || largeRooms.size() < large) {
+			return new ArrayList<Room>(); // Return empty arraylist (no rooms allocated as request cannot be fulfilled)
+		}
+		ArrayList<Room> allocatedRooms = new ArrayList<Room>();
+		
+		int smallFilled = 0;
+		int mediumFilled = 0;
+		int largeFilled = 0;
+		
+		while (smallFilled < small) {
+			smallRooms.get(smallFilled).addTimePeriod(id, startDate, endDate);
+			allocatedRooms.add(smallRooms.get(smallFilled));
+			smallFilled++;
+		}
+		
+		while (mediumFilled < medium) {
+			mediumRooms.get(mediumFilled).addTimePeriod(id, startDate, endDate);
+			allocatedRooms.add(mediumRooms.get(mediumFilled));
+			mediumFilled++;
+		}
+		
+		while (largeFilled < large) {
+			largeRooms.get(largeFilled).addTimePeriod(id, startDate, endDate);
+			allocatedRooms.add(largeRooms.get(largeFilled));
+			largeFilled++;
+		}	
+	}
+	
+	private ArrayList<Room> getRooms(LocalDate startDate, LocalDate endDate, String size) {
+		ArrayList<Room> roomList = new ArrayList<Room>();
+		for (int i = 0; i < this.rooms.size(); i++) {
+			if (this.rooms.get(i).getSize().equals(size)) {
+				if (this.rooms.get(i).checkAvailability(startDate, endDate)) {
+					roomList.add(this.rooms.get(i));
+				}
+			}
+		}
+		return roomList;
+	}
+	
+	
+	
+	
 }
