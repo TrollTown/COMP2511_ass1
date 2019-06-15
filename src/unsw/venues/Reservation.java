@@ -10,8 +10,10 @@ public class Reservation {
 	private LocalDate startDate;
 	private LocalDate endDate;
 	
-	public Reservation(String id, LocalDate startDate, LocalDate endDate) {
+	public Reservation(String id, String venue, ArrayList<Room> rooms, LocalDate startDate, LocalDate endDate) {
 		this.id = id;
+		this.venue = venue;
+		this.rooms = rooms;
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}

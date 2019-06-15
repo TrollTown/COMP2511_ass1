@@ -2,6 +2,7 @@ package unsw.venues;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Room {
 	private String name;
@@ -35,6 +36,15 @@ public class Room {
 		this.occupancy.add(period);
 	}
 	
+	public void removeTimePeriods(String id) {
+		Iterator<TimePeriod> itr = this.occupancy.iterator();
+		while (itr.hasNext()) {
+			if (itr.next().getReservationID().equals(id)) {
+				itr.remove();
+			}
+		}
+	}
+	
 	private boolean checkDateRanges(LocalDate startDate, LocalDate endDate, TimePeriod period) {
 		if (startDate.compareTo(period.getEndDate()) > 0){
 			return true;
@@ -45,5 +55,10 @@ public class Room {
 		else {
 			return false;
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Room [name=" + name + ", size=" + size + ", occupancy=" + occupancy + "]";
 	}
 }

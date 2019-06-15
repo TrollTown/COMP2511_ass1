@@ -11,6 +11,9 @@ public class Venue {
 		this.name = name;
 		this.rooms = new ArrayList<Room>();
 	}
+	public String getName() {
+		return this.name;
+	}
 	
 	public ArrayList<Room> getRooms(){
 		return this.rooms;
@@ -53,7 +56,9 @@ public class Venue {
 			largeRooms.get(largeFilled).addTimePeriod(id, startDate, endDate);
 			allocatedRooms.add(largeRooms.get(largeFilled));
 			largeFilled++;
-		}	
+		}
+		
+		return allocatedRooms;
 	}
 	
 	private ArrayList<Room> getRooms(LocalDate startDate, LocalDate endDate, String size) {
