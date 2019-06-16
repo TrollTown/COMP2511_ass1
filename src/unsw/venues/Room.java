@@ -47,6 +47,10 @@ public class Room {
 		}
 	}
 	
+	public ArrayList<TimePeriod> getOccupancy(){
+		return this.occupancy;
+	}
+	
 	private boolean checkDateRanges(LocalDate startDate, LocalDate endDate, TimePeriod period) {
 		if (startDate.compareTo(period.getEndDate()) > 0){
 			return true;

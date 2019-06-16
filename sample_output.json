@@ -1,0 +1,28 @@
+Reservation [id=Annual Meeting, venue=Zoo, rooms=[Room [name=Penguin, size=small, occupancy=[TimePeriod [reservationID=Annual Meeting, startDate=2019-03-25, endDate=2019-03-26]]], Room [name=Hippo, size=large, occupancy=[TimePeriod [reservationID=Annual Meeting, startDate=2019-03-25, endDate=2019-03-26]]]], startDate=2019-03-25, endDate=2019-03-26]
+{
+  "venue": "Zoo",
+  "rooms": [
+    "Penguin",
+    "Hippo"
+  ],
+  "status": "success"
+}
+Reservation [id=Mattress Convention, venue=Zoo, rooms=[Room [name=Elephant, size=large, occupancy=[TimePeriod [reservationID=Mattress Convention, startDate=2019-03-24, endDate=2019-03-27]]]], startDate=2019-03-24, endDate=2019-03-27]
+{
+  "venue": "Zoo",
+  "rooms": ["Elephant"],
+  "status": "success"
+}
+Reservation [id=Dance Party, venue=Gardens, rooms=[Room [name=Figtree, size=large, occupancy=[TimePeriod [reservationID=Dance Party, startDate=2019-03-26, endDate=2019-03-26]]]], startDate=2019-03-26, endDate=2019-03-26]
+{
+  "venue": "Gardens",
+  "rooms": ["Figtree"],
+  "status": "success"
+}
+{
+  "rooms": ["Penguin"],
+  "status": "success"
+}
+{"status": "rejected"}
+{"status": "success"}
+{"status": "rejected"}
