@@ -10,6 +10,14 @@ public class Reservation {
 	private LocalDate startDate;
 	private LocalDate endDate;
 	
+	/**
+	 * Constructor for Reservation object: 5 arguments
+	 * @param id Reservation ID
+	 * @param venue Venue name
+	 * @param rooms Array of Room objects associated with reservation
+	 * @param startDate Start date of reservation
+	 * @param endDate End date of reservation
+	 */
 	public Reservation(String id, String venue, ArrayList<Room> rooms, LocalDate startDate, LocalDate endDate) {
 		this.id = id;
 		this.venue = venue;
@@ -18,6 +26,10 @@ public class Reservation {
 		this.endDate = endDate;
 	}
 	
+	/**
+	 * This method returns the ID of a reservation
+	 * @return 
+	 */
 	public String getID() {
 		return this.id;
 	}
