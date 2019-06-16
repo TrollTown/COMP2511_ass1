@@ -5,6 +5,7 @@ package unsw.venues;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -151,6 +152,7 @@ public class VenueHireSystem {
 			JSONObject jsonObj = new JSONObject();
 			jsonObj.put("room", currRoom.getName());
 			ArrayList<JSONObject> reservations = new ArrayList<JSONObject>();
+			Collections.sort(currRoom.getOccupancy());
 			for (int j = 0; j < currRoom.getOccupancy().size(); j++) {
 				TimePeriod timeSlot = currRoom.getOccupancy().get(j);
 				JSONObject reservationObj = new JSONObject();

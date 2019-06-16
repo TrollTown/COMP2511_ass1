@@ -2,7 +2,7 @@ package unsw.venues;
 
 import java.time.LocalDate;
 
-public class TimePeriod {
+public class TimePeriod implements Comparable<TimePeriod> {
 	private String reservationID;
 	private LocalDate startDate;
 	private LocalDate endDate;
@@ -28,5 +28,10 @@ public class TimePeriod {
 	@Override
 	public String toString() {
 		return "TimePeriod [reservationID=" + reservationID + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+	}
+
+	@Override
+	public int compareTo(TimePeriod o) {
+		return this.startDate.compareTo(o.getStartDate());
 	}
 }
