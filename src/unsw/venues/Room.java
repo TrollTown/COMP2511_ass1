@@ -12,6 +12,7 @@ public class Room {
 	public Room (String name, String size) {
 		this.name = name;
 		this.size= size;
+		this.occupancy = new ArrayList<TimePeriod>();
 	}
 	
 	public String getName() {
@@ -22,8 +23,9 @@ public class Room {
 		return this.size;
 	}
 	
-	public boolean checkAvailability(LocalDate startDate, LocalDate endDate) {
+	public boolean checkAvailability(String id, LocalDate startDate, LocalDate endDate) {
 		for (int i = 0; i < this.occupancy.size(); i++) {
+			if (this.occupancy.get(i).getReservationID().equals(id)) continue;
 			if (checkDateRanges(startDate, endDate, this.occupancy.get(i)) == false) {
 				return false;
 			}

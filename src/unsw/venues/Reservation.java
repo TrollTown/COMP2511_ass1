@@ -53,4 +53,10 @@ public class Reservation {
 	public void removeRoom(Room room) {
 		this.rooms.remove(room);
 	}
+
+	@Override
+	public String toString() {
+		return "Reservation [id=" + id + ", venue=" + venue + ", rooms=" + rooms + ", startDate=" + startDate
+				+ ", endDate=" + endDate + "]";
+	}
 }

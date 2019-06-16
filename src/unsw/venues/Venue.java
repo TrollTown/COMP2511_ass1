@@ -27,9 +27,9 @@ public class Venue {
 	
 	
 	public ArrayList<Room> requestRooms(String id, LocalDate startDate, LocalDate endDate, int small, int medium, int large){
-		ArrayList<Room> smallRooms = getRooms(startDate, endDate, "small");
-		ArrayList<Room> mediumRooms = getRooms(startDate, endDate, "medium");
-		ArrayList<Room> largeRooms = getRooms(startDate, endDate, "large");
+		ArrayList<Room> smallRooms = getRooms(id, startDate, endDate, "small");
+		ArrayList<Room> mediumRooms = getRooms(id, startDate, endDate, "medium");
+		ArrayList<Room> largeRooms = getRooms(id, startDate, endDate, "large");
 		
 		if (smallRooms.size() < small || mediumRooms.size() < medium || largeRooms.size() < large) {
 			return new ArrayList<Room>(); // Return empty arraylist (no rooms allocated as request cannot be fulfilled)
@@ -61,17 +61,30 @@ public class Venue {
 		return allocatedRooms;
 	}
 	
-	private ArrayList<Room> getRooms(LocalDate startDate, LocalDate endDate, String size) {
+	public boolean checkChange(String id, LocalDate startDate, LocalDate endDate, int small, int medium , int large) {
+		ArrayList<Room> smallRooms = getRooms(id, startDate, endDate, "small");
+		ArrayList<Room> mediumRooms = getRooms(id, startDate, endDate, "medium");
+		ArrayList<Room> largeRooms = getRooms(id, startDate, endDate, "large");
+		
+		if (smallRooms.size() < small || mediumRooms.size() < medium || largeRooms.size() < large) {
+			return false;
+		}
+		return true;
+	}
+	
+	
+	private ArrayList<Room> getRooms(String id, LocalDate startDate, LocalDate endDate, String size) {
 		ArrayList<Room> roomList = new ArrayList<Room>();
 		for (int i = 0; i < this.rooms.size(); i++) {
 			if (this.rooms.get(i).getSize().equals(size)) {
-				if (this.rooms.get(i).checkAvailability(startDate, endDate)) {
+				if (this.rooms.get(i).checkAvailability(id, startDate, endDate)) {
 					roomList.add(this.rooms.get(i));
 				}
 			}
 		}
 		return roomList;
 	}
+	
 	
 	
 	

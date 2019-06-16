@@ -5,6 +5,7 @@ package unsw.venues;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -79,22 +80,49 @@ public class VenueHireSystem {
         case "list":
         	String id3 = json.getString("id");
         	
-        	JSONObject listOutput = list(id3);
+        	JSONArray listOutput = list(id3);
         	
         	System.out.println(listOutput.toString(2));
         	break;
         }
     }
 
-   
-	
-
 	public JSONObject change(String id1, LocalDate start1, LocalDate end1, int small1, int medium1, int large1) {
 		JSONObject result = new JSONObject();
         JSONArray rooms = new JSONArray();
+        boolean allocationSuccessful = false;
+        for (int i = 0; i < this.venues.size(); i++) {
+        	Venue venue = this.venues.get(i);
+        	if (venue.checkChange(id1, start1, end1, small1, medium1, large1)) {
+        		Reservation previousReservation = getReservationByID(id1);
+        		// Clear rooms in reservation
+        		Iterator<Room> itr = previousReservation.getRooms().iterator();
+        		while (itr.hasNext()) {
+        			itr.next();
+        			itr.remove();
+        		}
+        		// Change dates of reservations
+        		previousReservation.setStartDate(start1);
+        		previousReservation.setEndDate(end1);
+        		
+        		// Set new rooms
+        		ArrayList<Room> RoomsAllocated = new ArrayList<Room>();
+        		RoomsAllocated = this.venues.get(i).requestRooms(id1, start1, end1, small1, medium1, large1);
+        		for (int j = 0; j < RoomsAllocated.size(); j++) {
+        			rooms.put(RoomsAllocated.get(j).getName());
+        			previousReservation.addRoom(RoomsAllocated.get(j));
+        		}	
+        		allocationSuccessful = true;
+        		result.put("status", "success");
+        		result.put("rooms", rooms);
+        	}
+        	
+        }
+        if (allocationSuccessful == false) {
+        	result.put("status", "rejected");
+        }
         
-        
-		return null;
+		return result;
 	}
 	
 	public JSONObject cancel(String id2) {
@@ -114,7 +142,7 @@ public class VenueHireSystem {
 		return result;
 	}
 	
-	public JSONObject list(String id3) {
+	public JSONArray list(String id3) {
 		JSONArray result = new JSONArray();
 		for (int i = 0; i < this.venues.size(); i++) {
 			Venue venue = this.venues.get(i);
@@ -130,22 +158,19 @@ public class VenueHireSystem {
 				reservationObj.put("id", reservationID);
 				reservationObj.put("start", startDate);
 				reservationObj.put("end", endDate);
-				
+				reservations.add(reservationObj);
 			}
+			jsonObj.put("reservations", reservations);
 			result.put(jsonObj);
 		}
 		return result;
 	}
 	private void addRoom(String venue, String roomName, String size) {
-		if (getVenueByName(venue) != null) {
-        		this.venues.get(i).addRoom(roomName, size);
-        }
 		// If venue doesn't already exist add it and then add the room
-		else {
+		if (getVenueByName(venue) == null) {
 			addVenue(venue);
-	        getVenueByName(venue).addRoom(venue, size);
-		}
-        
+        }	
+	    getVenueByName(venue).addRoom(roomName, size);
     }
 
     public JSONObject request(String id, LocalDate start, LocalDate end,
@@ -169,8 +194,9 @@ public class VenueHireSystem {
         		}
         		
         		// Add the reservation to the venue hire system
-        		Reservation newReservation = new Reservation(id, this.venues.get(i).getName(), RoomsAllocated ,start, end);
+        		Reservation newReservation = new Reservation(id, this.venues.get(i).getName(), RoomsAllocated, start, end);
         		this.reservations.add(newReservation);
+        		System.out.println(newReservation);
         		
         		break;
         	}

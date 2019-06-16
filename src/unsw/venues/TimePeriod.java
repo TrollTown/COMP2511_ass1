@@ -24,4 +24,9 @@ public class TimePeriod {
 	public LocalDate getEndDate() {
 		return this.endDate;
 	}
+
+	@Override
+	public String toString() {
+		return "TimePeriod [reservationID=" + reservationID + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+	}
 }
