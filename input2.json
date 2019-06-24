@@ -1,0 +1,28 @@
+{ "command" : "room", "venue" : "Goldstein", "room": "G06", "size": "medium" }
+{ "command" : "room", "venue" : "Goldstein", "room": "G04", "size": "small" }
+{ "command" : "room", "venue" : "Goldstein", "room": "G03", "size": "large" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "216", "size": "large" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "220", "size": "large" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "115", "size": "large" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "107", "size": "small" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "114", "size": "small" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "219", "size": "small" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "G23", "size": "medium" }
+{ "command" : "room", "venue" : "UNSW Business School", "room": "G24", "size": "medium" }
+{ "command" : "room", "venue" : "Tyree Energy Technology", "room": "Michael Hintze Theatre", "size": "large" }
+{ "command" : "request", "id": "Annual General Meeting", "start": "2019-06-25", "end": "2019-06-30", "small": 0, "medium": 0, "large": 3 }
+{ "command" : "request", "id": "Quantum information applications of rare‑earth crystals", "start": "2019-06-25", "end": "2019-06-25", "small": 0, "medium": 0, "large": 1 }
+{ "command" : "request", "id": "SAP Concur EMS", "start": "2019-06-23", "end": "2019-06-25", "small": 0, "medium": 0, "large": 1 }
+{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2016-06-26", "small": 3, "medium": 2, "large": 1 }
+{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2016-06-26", "small": 3, "medium": 2, "large": 3 }
+{ "command" : "cancel", "id": "SAP Concur EMS" }
+{ "command" : "change", "id": "Quantum information applications of rare‑earth crystals", "start": "2019-06-25", "end": "2019-06-25", "small": 1, "medium": 1, "large": 1 }
+{ "command" : "request", "id": "Event which will not get allocated a room", "start": "2019-06-25", "end": "2019-06-27", "small": 1, "medium": 0, "large": 0 }
+{ "command" : "cancel", "id": "Information Day" }
+{ "command" : "list", "venue": "Goldstein" }
+{ "command" : "list", "venue": "UNSW Business School" }
+{ "command" : "list", "venue": "Tyree Energy Technology" }
+
+
+
+

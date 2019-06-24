@@ -1,0 +1,15 @@
+{ "command" : "room", "venue" : "Ainsworth Building", "room": "101", "size": "large" }
+{ "command" : "room", "venue" : "Ainsworth Building", "room": "201", "size": "medium" }
+{ "command" : "room", "venue" : "Ainsworth Building", "room": "303", "size": "small" }
+{ "command" : "room", "venue" : "Electrical Engineering", "room": "G03", "size": "medium" }
+{ "command" : "room", "venue" : "Electrical Engineering", "room": "214", "size": "large" }
+{ "command" : "room", "venue" : "Law Building", "room": "275", "size": "medium" }
+{ "command" : "request", "id": "SENG2021 Seminar", "start": "2019-03-23", "end": "2019-03-23", "small": 1, "medium": 1, "large": 1 }
+{ "command" : "request", "id": "Annual Meeting", "start": "2019-03-22", "end": "2019-03-27", "small": 0, "medium": 1, "large": 1 }
+{ "command" : "request", "id": "ENGG1000 Final Testing", "start": "2019-03-23", "end": "2019-03-23", "small": 0, "medium": 1, "large": 0 }
+{ "command" : "request", "id": "SENG3011 Workshop", "start": "2019-03-20", "end": "2019-03-31", "small": 0, "medium": 0, "large": 1 }
+{ "command" : "change", "id": "ENGG1000 Final Testing", "start": "2019-03-23", "end": "2019-03-23", "small": 1, "medium": 0, "large": 1 }
+{ "command" : "change", "id": "ENGG1000 Final Testing", "start": "2019-03-23", "end": "2019-03-31", "small": 0, "medium": 1, "large": 0 }
+{ "command" : "list", "venue": "Ainsworth Building" }
+{ "command" : "list", "venue": "Electrical Engineering" }
+{ "command" : "list", "venue": "Law Building" }

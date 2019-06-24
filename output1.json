@@ -1,0 +1,81 @@
+{
+  "venue": "Ainsworth Building",
+  "rooms": [
+    "303",
+    "201",
+    "101"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Electrical Engineering",
+  "rooms": [
+    "G03",
+    "214"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Law Building",
+  "rooms": ["275"],
+  "status": "success"
+}
+{"status": "rejected"}
+{"status": "rejected"}
+{
+  "venue": "Law Building",
+  "rooms": ["275"],
+  "status": "success"
+}
+[
+  {
+    "reservations": [{
+      "start": "2019-03-23",
+      "end": "2019-03-23",
+      "id": "SENG2021 Seminar"
+    }],
+    "room": "101"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-23",
+      "end": "2019-03-23",
+      "id": "SENG2021 Seminar"
+    }],
+    "room": "201"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-23",
+      "end": "2019-03-23",
+      "id": "SENG2021 Seminar"
+    }],
+    "room": "303"
+  }
+]
+[
+  {
+    "reservations": [{
+      "start": "2019-03-22",
+      "end": "2019-03-27",
+      "id": "Annual Meeting"
+    }],
+    "room": "G03"
+  },
+  {
+    "reservations": [{
+      "start": "2019-03-22",
+      "end": "2019-03-27",
+      "id": "Annual Meeting"
+    }],
+    "room": "214"
+  }
+]
+[{
+  "reservations": [{
+    "start": "2019-03-23",
+    "end": "2019-03-31",
+    "id": "ENGG1000 Final Testing"
+  }],
+  "room": "275"
+}]
