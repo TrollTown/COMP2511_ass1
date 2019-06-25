@@ -13,8 +13,8 @@
 { "command" : "request", "id": "Annual General Meeting", "start": "2019-06-25", "end": "2019-06-30", "small": 0, "medium": 0, "large": 3 }
 { "command" : "request", "id": "Quantum information applications of rare‑earth crystals", "start": "2019-06-25", "end": "2019-06-25", "small": 0, "medium": 0, "large": 1 }
 { "command" : "request", "id": "SAP Concur EMS", "start": "2019-06-23", "end": "2019-06-25", "small": 0, "medium": 0, "large": 1 }
-{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2016-06-26", "small": 3, "medium": 2, "large": 1 }
-{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2016-06-26", "small": 3, "medium": 2, "large": 3 }
+{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2019-06-26", "small": 3, "medium": 2, "large": 1 }
+{ "command" : "request", "id": "T2 Orientation to Research", "start": "2019-06-19", "end": "2019-06-26", "small": 3, "medium": 2, "large": 0 }
 { "command" : "cancel", "id": "SAP Concur EMS" }
 { "command" : "change", "id": "Quantum information applications of rare‑earth crystals", "start": "2019-06-25", "end": "2019-06-25", "small": 1, "medium": 1, "large": 1 }
 { "command" : "request", "id": "Event which will not get allocated a room", "start": "2019-06-25", "end": "2019-06-27", "small": 1, "medium": 0, "large": 0 }

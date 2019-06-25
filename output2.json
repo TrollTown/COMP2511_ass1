@@ -1,0 +1,465 @@
+{
+  "venue": "UNSW Business School",
+  "rooms": [
+    "216",
+    "220",
+    "115"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Goldstein",
+  "rooms": ["G03"],
+  "status": "success"
+}
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-25
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-25
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-25
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-25
+false
+{
+  "venue": "Tyree Energy Technology",
+  "rooms": ["Michael Hintze Theatre"],
+  "status": "success"
+}
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+{
+  "venue": "UNSW Business School",
+  "rooms": [
+    "107",
+    "114",
+    "219",
+    "G23",
+    "G24",
+    "216"
+  ],
+  "status": "success"
+}
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+true
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2016-06-26
+true
+this.StartDate is after endDate
+{
+  "venue": "UNSW Business School",
+  "rooms": [
+    "107",
+    "114",
+    "219",
+    "G23",
+    "G24",
+    "216",
+    "220",
+    "115"
+  ],
+  "status": "success"
+}
+{"status": "success"}
+{
+  "venue": "Goldstein",
+  "rooms": [
+    "G04",
+    "G06",
+    "G03"
+  ],
+  "status": "success"
+}
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-19
+End Date: 2019-06-27
+false
+this.endDate is before startDate
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+false
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+class java.time.LocalDate
+This.startDate: 2019-06-25
+End Date: 2019-06-27
+false
+{
+  "venue": "UNSW Business School",
+  "rooms": ["107"],
+  "status": "success"
+}
+{"status": "rejected"}
+[
+  {
+    "reservations": [{
+      "start": "2019-06-25",
+      "end": "2019-06-25",
+      "id": "Quantum information applications of rareâ\u20ac\u2018earth crystals"
+    }],
+    "room": "G06"
+  },
+  {
+    "reservations": [{
+      "start": "2019-06-25",
+      "end": "2019-06-25",
+      "id": "Quantum information applications of rareâ\u20ac\u2018earth crystals"
+    }],
+    "room": "G04"
+  },
+  {
+    "reservations": [{
+      "start": "2019-06-25",
+      "end": "2019-06-25",
+      "id": "Quantum information applications of rareâ\u20ac\u2018earth crystals"
+    }],
+    "room": "G03"
+  }
+]
+[
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-25",
+        "end": "2019-06-30",
+        "id": "Annual General Meeting"
+      }
+    ],
+    "room": "216"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-25",
+        "end": "2019-06-30",
+        "id": "Annual General Meeting"
+      }
+    ],
+    "room": "220"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-25",
+        "end": "2019-06-30",
+        "id": "Annual General Meeting"
+      }
+    ],
+    "room": "115"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-25",
+        "end": "2019-06-27",
+        "id": "Event which will not get allocated a room"
+      }
+    ],
+    "room": "107"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      }
+    ],
+    "room": "114"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      }
+    ],
+    "room": "219"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      }
+    ],
+    "room": "G23"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      },
+      {
+        "start": "2019-06-19",
+        "end": "2016-06-26",
+        "id": "T2 Orientation to Research"
+      }
+    ],
+    "room": "G24"
+  }
+]
+[{
+  "reservations": [],
+  "room": "Michael Hintze Theatre"
+}]

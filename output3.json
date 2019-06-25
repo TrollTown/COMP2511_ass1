@@ -1,0 +1,164 @@
+{"status": "rejected"}
+{
+  "venue": "Matthews",
+  "rooms": [
+    "Matthews A",
+    "Matthews B"
+  ],
+  "status": "success"
+}
+[
+  {
+    "reservations": [{
+      "start": "2019-10-01",
+      "end": "2019-10-07",
+      "id": "Annual Meeting"
+    }],
+    "room": "Matthews A"
+  },
+  {
+    "reservations": [{
+      "start": "2019-10-01",
+      "end": "2019-10-07",
+      "id": "Annual Meeting"
+    }],
+    "room": "Matthews B"
+  }
+]
+{"status": "rejected"}
+{
+  "venue": "Central Lecture Block",
+  "rooms": ["CLB7"],
+  "status": "success"
+}
+{"status": "rejected"}
+{
+  "venue": "Quadrangle Building",
+  "rooms": [
+    "1042",
+    "1043",
+    "1049"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Quadrangle Building",
+  "rooms": [
+    "1042",
+    "1043"
+  ],
+  "status": "success"
+}
+{
+  "venue": "Quadrangle Building",
+  "rooms": ["1049"],
+  "status": "success"
+}
+{"status": "rejected"}
+{
+  "venue": "Matthews",
+  "rooms": [
+    "Matthews A",
+    "Matthews B"
+  ],
+  "status": "success"
+}
+[{
+  "reservations": [{
+    "start": "2019-10-02",
+    "end": "2019-10-02",
+    "id": "A Fine Line: Painkillers and pleasures in the age of anxiety"
+  }],
+  "room": "CLB7"
+}]
+[
+  {
+    "reservations": [
+      {
+        "start": "2019-10-01",
+        "end": "2019-10-07",
+        "id": "Annual Meeting"
+      },
+      {
+        "start": "2019-10-08",
+        "end": "2019-10-20",
+        "id": "Australian Social Policy Conference 2019"
+      }
+    ],
+    "room": "Matthews A"
+  },
+  {
+    "reservations": [
+      {
+        "start": "2019-10-01",
+        "end": "2019-10-07",
+        "id": "Annual Meeting"
+      },
+      {
+        "start": "2019-10-08",
+        "end": "2019-10-20",
+        "id": "Australian Social Policy Conference 2019"
+      }
+    ],
+    "room": "Matthews B"
+  }
+]
+[
+  {
+    "reservations": [{
+      "start": "2019-10-02",
+      "end": "2019-10-05",
+      "id": "UNSW Open Day"
+    }],
+    "room": "1042"
+  },
+  {
+    "reservations": [{
+      "start": "2019-10-02",
+      "end": "2019-10-05",
+      "id": "UNSW Open Day"
+    }],
+    "room": "1043"
+  },
+  {
+    "reservations": [{
+      "start": "2019-10-01",
+      "end": "2019-10-31",
+      "id": "Employer engagement in welfare to work programmes"
+    }],
+    "room": "1049"
+  }
+]
+{"status": "success"}
+{"status": "success"}
+{"status": "success"}
+{"status": "success"}
+{"status": "success"}
+[{
+  "reservations": [],
+  "room": "CLB7"
+}]
+[
+  {
+    "reservations": [],
+    "room": "Matthews A"
+  },
+  {
+    "reservations": [],
+    "room": "Matthews B"
+  }
+]
+[
+  {
+    "reservations": [],
+    "room": "1042"
+  },
+  {
+    "reservations": [],
+    "room": "1043"
+  },
+  {
+    "reservations": [],
+    "room": "1049"
+  }
+]

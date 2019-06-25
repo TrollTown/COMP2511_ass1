@@ -1,0 +1,32 @@
+{ "command" : "room", "venue" : "Central Lecture Block", "room": "CLB7", "size": "large" }
+{ "command" : "room", "venue" : "Matthews", "room": "Matthews A", "size": "large" }
+{ "command" : "room", "venue" : "Matthews", "room": "Matthews B", "size": "large" }
+{ "command" : "room", "venue" : "Quadrangle Building", "room": "1042", "size": "small" }
+{ "command" : "room", "venue" : "Quadrangle Building", "room": "1043", "size": "medium" }
+{ "command" : "room", "venue" : "Quadrangle Building", "room": "1049", "size": "medium" }
+{ "command" : "cancel", "id": "test" }
+{ "command" : "request", "id": "Annual Meeting", "start": "2019-10-01", "end": "2019-10-07", "small": 0, "medium": 0, "large": 2 }
+{ "command" : "list", "venue": "Matthews" }
+{ "command" : "request", "id": "A Fine Line: Painkillers and pleasures in the age of anxiety", "start": "2019-10-02", "end": "2019-10-02", "small": 0, "medium": 0, "large": 2 }
+{ "command" : "request", "id": "A Fine Line: Painkillers and pleasures in the age of anxiety", "start": "2019-10-02", "end": "2019-10-02", "small": 0, "medium": 0, "large": 1 }
+{ "command" : "request", "id": "UNSW Open Day", "start": "2019-10-02", "end": "2019-10-03", "small": 0, "medium": 0, "large": 1 }
+{ "command" : "request", "id": "UNSW Open Day", "start": "2019-10-02", "end": "2019-10-03", "small": 1, "medium": 2, "large": 0 }
+{ "command" : "change", "id": "UNSW Open Day", "start": "2019-10-02", "end": "2019-10-05", "small": 1, "medium": 1, "large": 0 }
+{ "command" : "request", "id": "Employer engagement in welfare to work programmes", "start": "2019-10-01", "end": "2019-10-31", "small": 0, "medium": 1, "large": 0 }
+{ "command" : "request", "id": "Australian Social Policy Conference 2019", "start": "2019-10-07", "end": "2019-10-20", "small": 0, "medium": 0, "large": 2 }
+{ "command" : "request", "id": "Australian Social Policy Conference 2019", "start": "2019-10-08", "end": "2019-10-20", "small": 0, "medium": 0, "large": 2 }
+{ "command" : "list", "venue": "Central Lecture Block" }
+{ "command" : "list", "venue": "Matthews" }
+{ "command" : "list", "venue": "Quadrangle Building" }
+{ "command" : "cancel", "id": "Annual Meeting" }
+{ "command" : "cancel", "id": "A Fine Line: Painkillers and pleasures in the age of anxiety" }
+{ "command" : "cancel", "id": "UNSW Open Day" }
+{ "command" : "cancel", "id": "Employer engagement in welfare to work programmes" }
+{ "command" : "cancel", "id": "Australian Social Policy Conference 2019" }
+{ "command" : "list", "venue": "Central Lecture Block" }
+{ "command" : "list", "venue": "Matthews" }
+{ "command" : "list", "venue": "Quadrangle Building" }
+
+
+
+
