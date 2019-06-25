@@ -44,11 +44,6 @@ public class TimePeriod implements Comparable<TimePeriod> {
 	}
 
 	@Override
-	public String toString() {
-		return "TimePeriod [reservationID=" + reservationID + ", startDate=" + startDate + ", endDate=" + endDate + "]";
-	}
-
-	@Override
 	public int compareTo(TimePeriod o) {
 		return this.startDate.compareTo(o.getStartDate());
 	}

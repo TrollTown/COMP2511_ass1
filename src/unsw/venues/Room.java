@@ -5,8 +5,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Room {
+	enum Size {
+		small,
+		medium,
+		large
+	}
+	
 	private String name;
-	private String size;
+	private Size size;
 	private ArrayList<TimePeriod> occupancy;
 	
 	/**
@@ -14,7 +20,7 @@ public class Room {
 	 * @param name Name of the room
 	 * @param size Size of the room
 	 */
-	public Room (String name, String size) {
+	public Room (String name, Size size) {
 		this.name = name;
 		this.size= size;
 		this.occupancy = new ArrayList<TimePeriod>();
@@ -32,7 +38,7 @@ public class Room {
 	 * This method returns the size of the room
 	 * @return Size of the room
 	 */
-	public String getSize() {
+	public Size getSize() {
 		return this.size;
 	}
 	
@@ -107,10 +113,5 @@ public class Room {
 		else {
 			return false;
 		}
-	}
-
-	@Override
-	public String toString() {
-		return "Room [name=" + name + ", size=" + size + ", occupancy=" + occupancy + "]";
 	}
 }

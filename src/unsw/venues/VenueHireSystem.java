@@ -61,7 +61,6 @@ public class VenueHireSystem {
             System.out.println(result.toString(2));
             break;
 
-        // TODO Implement other commands
         case "change":
         	String id1 = json.getString("id");
         	LocalDate start1 = LocalDate.parse(json.getString("start"));
@@ -69,24 +68,19 @@ public class VenueHireSystem {
         	int small1 = json.getInt("small");
         	int medium1 = json.getInt("medium");
         	int large1 = json.getInt("large");
-        	
         	JSONObject changeOutput = change(id1, start1, end1, small1, medium1, large1);
-        	
         	System.out.println(changeOutput.toString(2));
         	break;
         	
         case "cancel":
         	String id2 = json.getString("id");
-        	
         	JSONObject cancelOutput = cancel(id2);
-        	
         	System.out.println(cancelOutput.toString(2));
         	break;
         
         case "list":
         	String venue2 = json.getString("venue");
         	JSONArray listOutput = list(venue2);
-        	
         	System.out.println(listOutput.toString(2));
         	break;
         }
@@ -110,16 +104,12 @@ public class VenueHireSystem {
         	Venue venue = this.venues.get(i);
         	if (venue.checkChange(id1, start1, end1, small1, medium1, large1)) {
         		Reservation previousReservation = getReservationByID(id1);
-        		// Clear rooms in reservation
+        		// Clear rooms in reservation (including corresponding TimePeriod objects
         		Iterator<Room> itr = previousReservation.getRooms().iterator();
         		while (itr.hasNext()) {
         			itr.next().removeTimePeriods(id1);
         			itr.remove();
         		}
-        		// Change dates of reservations
-        		previousReservation.setStartDate(start1);
-        		previousReservation.setEndDate(end1);
-        		
         		// Set new rooms
         		ArrayList<Room> RoomsAllocated = new ArrayList<Room>();
         		RoomsAllocated = this.venues.get(i).requestRooms(id1, start1, end1, small1, medium1, large1);
@@ -133,7 +123,6 @@ public class VenueHireSystem {
         		result.put("rooms", rooms);
         		break;
         	}
-        	
         }
         if (allocationSuccessful == false) {
         	result.put("status", "rejected");
@@ -226,35 +215,28 @@ public class VenueHireSystem {
             int small, int medium, int large) {
     	JSONObject result = new JSONObject();
         JSONArray rooms = new JSONArray();
-     
         boolean allocationSuccessful = false;
-        
+        // Loop through all venues and check each one to see if rooms can be allocated
         for (int i = 0; i < this.venues.size(); i++) {
         	ArrayList<Room> RoomsAllocated = new ArrayList<Room>();
         	RoomsAllocated = this.venues.get(i).requestRooms(id, start, end, small, medium, large);
-        	
+        	// If rooms were successfully allocated, put status, store rooms in arraylist
         	if (RoomsAllocated.size() != 0) {
         		allocationSuccessful = true;
         		result.put("status", "success");
         		result.put("venue", this.venues.get(i).getName());
-        		
         		for (int j = 0; j < RoomsAllocated.size(); j++) {
-        			rooms.put(RoomsAllocated.get(j).getName());
-        			
+        			rooms.put(RoomsAllocated.get(j).getName());	
         		}
-        		
         		// Add the reservation to the venue hire system
-        		Reservation newReservation = new Reservation(id, this.venues.get(i).getName(), RoomsAllocated, start, end);
-        		this.reservations.add(newReservation);
-        		
+        		Reservation newReservation = new Reservation(id, this.venues.get(i).getName(), RoomsAllocated);
+        		this.reservations.add(newReservation);		
         		break;
         	}
         }
-        
         if (allocationSuccessful == true) {
         	result.put("rooms", rooms);
         }
-        
         if (allocationSuccessful == false) {
         	result.put("status", "rejected");
         }
@@ -269,17 +251,12 @@ public class VenueHireSystem {
      */
     public static void main(String[] args) {
         VenueHireSystem system = new VenueHireSystem();
-
         Scanner sc = new Scanner(System.in);
-
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            //System.out.println(line);
             if (!line.trim().equals("")) {
                 JSONObject command = new JSONObject(line);
-                
-                system.processCommand(command);
-                
+                system.processCommand(command);     
             }
         }
         sc.close();
@@ -291,7 +268,7 @@ public class VenueHireSystem {
      * @return Reservation object with the corresponding ID or null
      * if the ID could not be found on the system
      */
-    public Reservation getReservationByID(String id){
+    private Reservation getReservationByID(String id){
     	for (int i = 0; i < this.reservations.size(); i++) {
     		if (this.reservations.get(i).getID().equals(id)) {
     			return this.reservations.get(i);
@@ -299,15 +276,7 @@ public class VenueHireSystem {
     	}
     	return null;
     }
-    
-    /**
-     * This method returns the list of venues stored within the system
-     * @return ArrayList of all venues stored in the system
-     */
-    public ArrayList<Venue> getVenues(){
-    	return this.venues;
-    }
-    
+     
     /**
      * This private method adds a venue to the system 
      * (called by the addRoom function if a venue cannot be found)
